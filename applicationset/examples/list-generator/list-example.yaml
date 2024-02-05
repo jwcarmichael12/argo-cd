@@ -8,16 +8,20 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: IBM-DevOps-ArgoCD
+      - cluster: in-cluster
         url: https://kubernetes.default.svc
   template:
     metadata:
-      name: 'james-guestbook'
+      name: '{{.cluster}}-guestbook'
     spec:
       project: engineering-dev
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
       source:
         repoURL: https://github.com/jwcarmichael12/argo-cd/argo-cd.git
-        targetRevision: HEAD
+        targetRevision: MASTER
         path: applicationset/examples/list-generator/guestbook/{{.cluster}}
       destination:
         server: '{{.url}}'
