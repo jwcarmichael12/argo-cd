@@ -21,7 +21,7 @@ spec:
           selfHeal: true
       source:
         repoURL: https://github.com/jwcarmichael12/argo-cd/argo-cd.git
-        targetRevision: MASTER
+        targetRevision: master
         path: applicationset/examples/list-generator/guestbook/{{.cluster}}
       destination:
         server: '{{.url}}'
