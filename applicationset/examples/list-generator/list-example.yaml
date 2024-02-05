@@ -14,7 +14,7 @@ spec:
     metadata:
       name: '{{.cluster}}-guestbook'
     spec:
-      project: engineering-dev
+      project: default
       syncPolicy:
         automated:
           prune: true
@@ -25,4 +25,4 @@ spec:
         path: applicationset/examples/list-generator/guestbook/{{.cluster}}
       destination:
         server: '{{.url}}'
-        namespace: engineering-dev
+        namespace: default
