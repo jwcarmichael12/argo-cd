@@ -20,9 +20,9 @@ spec:
           prune: true
           selfHeal: true
       source:
-        repoURL: https://github.com/jwcarmichael12/argo-cd/argo-cd.git
+        repoURL: https://github.com/jwcarmichael12/argo-cd
         targetRevision: master
-        path: applicationset/examples/list-generator/guestbook/{{.cluster}}
+        path: applicationset/examples/list-generator/guestbook/engineering-dev
       destination:
         server: '{{.url}}'
         namespace: default
