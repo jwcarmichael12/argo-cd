@@ -16,7 +16,7 @@ spec:
         namespace: engineering-prod
   template:
     metadata:
-      name: '{{.cluster}}-guestbooktest'
+      name: '{{.cluster}}-guestbook'
     spec:
       project: default
       syncPolicy:
