@@ -20,6 +20,7 @@ spec:
     spec:
       project: default
       syncPolicy:
+        applicationsSync: sync
         automated:
           prune: true
           selfHeal: true
